@@ -2,10 +2,33 @@ body{
     margin: 0px;
     padding: 0px;
     width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(/images/signupback2.jpg);
+    height: 140vh;
+    background-color: rgb(22, 22, 22);
+    /* background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(/images/signupback2.jpg); */
     background-position: center;
     background-size: cover;
+}
+
+@font-face {
+    font-family: font3;
+    src: url(./futura\ medium\ bt.ttf);
+}
+
+
+@font-face {
+    font-family: font4;
+    src: url(./Futura\ Heavy\ font.ttf);
+}
+
+
+
+form{
+color: white;
+}
+
+h2{
+    text-align: center;
+    color: #1DB954;
 }
 
 .box{
@@ -16,13 +39,15 @@ body{
      
     padding: 20px;
     margin-left: 460px;
-    margin-top: 10px;
-    /* margin-bottom: 10px; */
+    margin-top: 20px;
+    margin-bottom: 10px;
     /* height: 700px; */
     width: 400px;
     border-radius: 20px;
+    background-color: rgb(15, 15, 15);
+
     box-shadow: 0 5px 15px rgba(0,0,0,.5);
-    background: rgba(255,255,255,.2);
+    /* background: rgba(255,255,255,.2); */
     
 }
 
@@ -33,6 +58,32 @@ body{
     text-align: center;
 }
 
+.btn{
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    width: 90px;
+    background-color: #1DB954;
+    color: beige;
+    font-family: font4;
+}
+
 .butt{
     text-align: center;
+   
 }
+
+/* .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    border: none;
+    text-decoration: none;
+    color: #333;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+
+  .button:hover{
+    transform: translateY(-5px);
+}
+   */

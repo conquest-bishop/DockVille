@@ -10,11 +10,38 @@
 
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Dockville</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Parking</a></li>
+              <li><a class="dropdown-item" href="#">Car Clinic</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">coming soon</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div> -->
+    </div>
+  </nav>
   <!-- start of registration form  -->
 <div class="box">
   <div class="register">
-    <form id="formId" name="register" action="#" onsubmit="return Validate()" method="POST">
-      <h2>Register Form</h2>
+    <form id="formId" name="register" action="#" onsubmit="return Validate(event)" method="POST">
+      <h2>Client Form</h2>
         <div class="mb-3">
           <div class="row">
             <div class="col">
@@ -76,11 +103,11 @@
               <br>
               <div class="row">
                 <div class="col">
-                  <label for="date" >Select Date</label>
+                  <label for="date" >Arrival Date</label>
                   <input type="date" class="datetime" name="date">
                 </div>
                 <div class="col">
-                  <label for="time" >Select time</label>
+                  <label for="time" >Arrival time</label>
                   <input type="time" class="datetime" name="time">
                 </div>
               </div>
@@ -88,14 +115,13 @@
          
         </div>
         <br>
-        <div class="butt">  
-        <button type="submit"  class="btn btn-primary">Next</button>
-          <!-- <a class="button" href="home.html">Next</a> -->
-        </div>
+        <div class="butt">
+          <button type="submit" class="btn">Submit</button>
+          </div>
       </form>
     </div>
 </div>
-<script src="./js/registerValidation.js"></script>
+<script src="./js/regValidation2.js"></script>
 <script src="libs/bootstrap/js/bootstrap.bundle.js"></script>
 </body>
 </html>
