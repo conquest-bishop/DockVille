@@ -20,6 +20,10 @@ body{
     src: url(./Futura\ Heavy\ font.ttf);
 }
 
+.navbar-brand{
+    font-family: font4;
+}
+
 
 
 form{
