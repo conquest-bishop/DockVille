@@ -10,6 +10,11 @@ const Validate=(event)=>{
     let model = document.register.modelinput
     let color = document.register.colorinput
     let number = document.register.numberplate
+    let dayParking = document.register.dayparkingoption
+    let nightParking = document.register.nightparkingoption
+    let lessThan = document.register.lessthan3
+    let Date = document.register.date
+    let Time = document.register.time
 
     // picking error fields
     let errorFirstName = document.getElementById("fnameError")
@@ -21,9 +26,11 @@ const Validate=(event)=>{
     let errorModel = document.getElementById("modelError")
     let errorColor = document.getElementById("colorError")
     let errorNumber = document.getElementById("numberplateError")
-
-
-
+    let errorDay = document.getElementById("dayError")
+    let errorNight = document.getElementById("nightError")
+    let errorLess = document.getElementById("lessthanError")
+    let errorDate = document.getElementById("dateError")
+    let errorTime = document.getElementById("timeError")
 
 
     // validating first name input
@@ -188,10 +195,15 @@ const Validate=(event)=>{
         number.style.border = "1px solid green";
     }
 
+    
+
 
    
     if(error > 0){
         event.preventDefault();
+    }else{
+        window.location.href = "../newhome.html"
+    
     }
 
 
@@ -204,6 +216,8 @@ const Validate=(event)=>{
     
 
 }
+
+
 
 
    
