@@ -29,7 +29,7 @@
                 </ul>
               </li>
             </ul>
-            <form class="d-flex" onsubmit="return Disablefield()">
+            <form class="d-flex" onsubmit="">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
@@ -37,32 +37,104 @@
         </div>
       </nav>
 
-     <div class="container-cards"></div>
+     <div class="container-cards">
       <div class="row">
         <div class="col-sm-6">
+          <div class="card parking-card gy-5">
+            <div class="card-body parking-body">
+                <h1>PARKING FORM</h1>
+            </div>
+            
+              </div>
+            </div>
+        <div class="col-sm-6">
           <div class="card">
-            <div class="card-body">
-              <h1 class="card-title card-title-parking">Parking form</h1>
+            <div class="card-body form-card">
+              <form id="formId" name="register" action="#" onsubmit="return Validate(event)" method="POST">
+                <!-- <h2 >Client Form</h2> -->
+                  <div class="mb-3">
+                    <div class="row">
+                      <div class="col">
+                        <label for="exampleInputFirstName" class="form-label">First name</label>
+                        <input type="text" class="form-control" name="firstname" placeholder="First name" aria-label="First name">
+                        <span id = "fnameError"></span>
+                      </div>
+            <div class="col">
+              <label for="exampleInputLastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" name="lastname" placeholder="Last name" aria-label="Last name">
+            <span id = "lnameError"></span>
             </div>
           </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card gy-5">
-            <div class="card-body">
-                <form id="formID" name="register" action="#" onsubmit='return Validate()' method="POST">
-                <label for="exampleInputDayParking" class="form-label">Day Parking</label>
+          <div class="row">
+            <div class="col">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" name="emailinput" aria-describedby="emailHelp" placeholder="email">
+              <span id = "emailError"></span>
+            </div>
+            <div class="col">
+              <label for="exampleInputPhoneNumber" class="form-label">Phone Number</label>
+              <input type="text" class="form-control" name="phoneinput" placeholder="Phone Number" aria-label="Phone Number">
+              <span id = "phoneError"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <label for="exampleInputNIN" class="form-label">National ID Number</label>
+              <input type="text" name="niniput" class="form-control" placeholder="NIN" aria-label="NIN">
+              <span id = "ninError"></span>
+            </div>
+            <div class="col">
+              <label for="exampleInputNumberPlate" class="form-label">Car Type</label>
                 <label class="visually-hidden" for="inlineFormSelectPref">Preferences</label>
-                <select class="form-select" name="dayparkingoption" id="inlineFormSelectPref">
-                    <option selected></option>
-                    <option value="1">Personal Car(3000)</option>
-                    <option value="2">Taxi(3000)</option>
-                    <option value="3">Coaster(4000)</option>
-                    <option value="3">Truck(3000(</option>
-                    <option value="4">Boda Boda(2000)</option>
+                <select class="form-select" name="carType" id="inlineFormSelectPref">
+                  <option selected>Choose...</option>
+                  <option value="1">Personal Car(not above 5 seater)</option>
+                  <option value="2">Taxi(14 seater and below)</option>
+                  <option value="3">Coaster(16 seater and above)</option>
+                  <option value="3">Truck</option>
+                  <option value="4">Boda Boda</option>
                 </select>
-                <span id="dayError"></span>
-                 <!-- <br> -->
-                <label for="exampleInputNightParking" class="form-label">Night Parking</label>
+                <span id = "carError"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <label for="exampleInputModel" class="form-label">Model</label>
+              <input type="text" name="modelinput" class="form-control" placeholder="Model" aria-label="Model">
+              <span id = "modelError"></span>
+            </div>
+            <div class="col">
+              <label for="exampleInputNumberPlate" class="form-label">Color</label>
+              <label class="visually-hidden" for="inlineFormSelectPref">Preferences</label>
+              <select name="colorinput" class="form-select" id="inlineFormSelectPref">
+                <option selected>Choose...</option>
+                <option value="1">White</option>
+                <option value="2">Black</option>
+                <option value="3">Silver</option>
+                <option value="3">Other</option>
+              </select>
+              <span id = "colorError"></span>
+            </div>
+          </div>
+          <label for="exampleInputNumberPlate" class="form-label">Number Plate</label>
+          <input type="text" name="numberplate" class="form-control" placeholder="Number Plate" aria-label="Number Plate">
+          <span id = "numberplateError"></span>
+          <div class="row">
+            <div class="col">
+              <label for="exampleInputDayParking" class="form-label">Day Parking</label>
+              <label class="visually-hidden" for="inlineFormSelectPref">Preferences</label>
+              <select class="form-select" name="dayparkingoption" id="inlineFormSelectPref">
+                  <option selected></option>
+                  <option value="1">Personal Car(3000)</option>
+                  <option value="2">Taxi(3000)</option>
+                  <option value="3">Coaster(4000)</option>
+                  <option value="3">Truck(3000(</option>
+                  <option value="4">Boda Boda(2000)</option>
+              </select>
+              <span id="dayError"></span>
+            </div>
+            <div class="col">
+              <label for="exampleInputNightParking" class="form-label">Night Parking</label>
                 <label class="visually-hidden" for="inlineFormSelectPref">Preferences</label>
                 <select class="form-select" name="nightparkingoption" id="inlineFormSelectPref">
                     <option selected></option>
@@ -73,27 +145,39 @@
                     <option value="4">Boda Boda(2000)</option>
                 </select>
                 <span id="nightError"></span>
-
-                <label for="exampleInputLesssthan3" class="form-label">less than 3hr</label>
-                <label class="visually-hidden" for="inlineFormSelectPref">Preferences</label>
-                <select class="form-select" name="lessthan3" id="inlineFormSelectPref">
-                    <option selected></option>
-                    <option value="1">Personal Car(2000)</option>
-                    <option value="2">Taxi(2000)</option>
-                    <option value="3">Coaster(3000)</option>
-                    <option value="3">Truck(2000(</option>
-                    <option value="4">Boda Boda(1000)</option>
-                </select>
-                <span id="lessthanError"></span>
-                <br>
-                <div class="butt">
-                  <button type="submit" class="btn">Submit</button>
-                  </div>
-            </form>
             </div>
-            
-              </div>
+          </div>
+          <label for="exampleInputLesssthan3" class="form-label">less than 3hr</label>
+          <label class="visually-hidden" for="inlineFormSelectPref">Preferences</label>
+          <select class="form-select" name="lessthan3" id="inlineFormSelectPref">
+              <option selected></option>
+              <option value="1">Personal Car(2000)</option>
+              <option value="2">Taxi(2000)</option>
+              <option value="3">Coaster(3000)</option>
+              <option value="3">Truck(2000(</option>
+              <option value="4">Boda Boda(1000)</option>
+          </select>
+          <span id="lessthanError"></span>
+          <br>
+          <div class="row">
+            <div class="col">
+              <label for="date" >Arrival Date</label>
+              <input type="date" class="datetime" name="date">
             </div>
+            <div class="col">
+              <label for="time" >Arrival time</label>
+              <input type="time" class="datetime" name="time">
+            </div>
+          </div>
+          <br>
+          <div class="butt">
+            <button type="submit" class="btn">Submit</button>
+            </div>
+        </div>
+              </form>
+          </div>
+          </div>
+        </div>
           </div>
         </div>
       </div>
