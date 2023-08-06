@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(22, 22, 22);
+    background-color: rgb(255, 255, 255);
     padding: 0px;
 }
 
@@ -30,18 +30,20 @@ h1{
 
 .row{
     padding: 20px ;
-    margin-top: 70px;
+    margin-top: 0px;
     /* margin-bottom: 200px; */
 
 }
 
 .card{
     height: 400px;
-    background-color: rgb(15, 15, 15);
-    color: beige;
+    /* background-color: rgb(15, 15, 15); */
+    color: #011120;
     box-shadow: 0 5px 15px rgba(0,0,0,.5);
     text-align: center;
     border-radius: 60px;
+    background-color: rgb(227, 250, 255);
+    border-color: rgb(227, 250, 255);
 } 
 
 
@@ -71,6 +73,11 @@ h1{
 .nav-link{
     color: #1DB954;
     font-family: font4;
+}
+
+.heading{
+    text-align: center;
+    color: #011120;
 }
 
 
